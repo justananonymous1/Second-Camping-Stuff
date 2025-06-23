@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products - OutdoorGear</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"/>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/products.css" />
+  </head>
+  <body>
+    <header id="header"></header>
+
+    <section class="products-hero py-4">
+      <div class="container">
+        <h1 class="products-title">Our Products</h1>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Products</li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <section class="products-main py-5">
+      <div class="container">
+        <div class="post-product">
+          <h3>Have a Product to Sell?</h3>
+          <p>Join our marketplace and reach thousands of outdoor enthusiasts</p>
+          <button class="btn btn-primary">Post Your Product</button>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-3 mb-4">
+            <div class="card filter-card">
+              <div class="card-body">
+                <h3 class="filter-title">Filters</h3>
+
+                <div class="filter-section">
+                  <h4 class="filter-section-title">Categories</h4>
+                  <div class="form-check">
+                    <input class="form-check-input filter-category" type="checkbox" value="tents" id="category-tents"/>
+                    <label class="form-check-label" for="category-tents">Tents</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input filter-category" type="checkbox" value="sleeping" id="category-sleeping"/>
+                    <label class="form-check-label" for="category-sleeping">Sleeping Gear</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input filter-category" type="checkbox" value="cooking" id="category-cooking"/>
+                    <label class="form-check-label" for="category-cooking">Cooking Gear</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input filter-category" type="checkbox" value="backpacks" id="category-backpacks"/>
+                    <label class="form-check-label" for="category-backpacks">Backpacks</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input filter-category" type="checkbox" value="accessories" id="category-accessories"/>
+                    <label class="form-check-label" for="category-accessories">Accessories</label>
+                  </div>
+                </div>
+
+                <div class="filter-section">
+                  <h4 class="filter-section-title">Price Range</h4>
+                  <div class="range-slider">
+                    <input type="range" class="form-range" min="0" max="500" step="10" id="price-range"/>
+                    <div class="price-inputs d-flex justify-content-between mt-2">
+                      <div class="price-min">$<span id="price-min">0</span></div>
+                      <div class="price-max">$<span id="price-max">500</span></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="filter-section">
+                  <h4 class="filter-section-title">Rating</h4>
+                  <div class="form-check">
+                    <input class="form-check-input filter-rating" type="checkbox" value="4" id="rating-4"/>
+                    <label class="form-check-label" for="rating-4">
+                      <div class="text-warning">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star"></i>
+                      </div>
+                      & Up
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input filter-rating" type="checkbox" value="3" id="rating-3"/>
+                    <label class="form-check-label" for="rating-3">
+                      <div class="text-warning">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star"></i>
+                        <i class="bi bi-star"></i>
+                      </div>
+                      & Up
+                    </label>
+                  </div>
+                </div>
+
+                <button id="apply-filters" class="btn btn-primary w-100 mt-3">Apply Filters</button>
+                <button id="reset-filters" class="btn btn-outline-secondary w-100 mt-2">Reset Filters</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-9">
+            <div class="products-header mb-4">
+              <div class="row align-items-center">
+                <div class="col-md-6">
+                  <p class="products-count"><span id="product-count">0</span> products found</p>
+                </div>
+                <div class="col-md-6">
+                  <div class="d-flex justify-content-md-end">
+                    <div class="sort-dropdown">
+                      <select class="form-select" id="sort-products">
+                        <option value="featured">Featured</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="rating">Highest Rated</option>
+                        <option value="newest">Newest</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-4" id="products-container"></div>
+
+            <nav aria-label="Products pagination" class="mt-5">
+              <ul class="pagination justify-content-center" id="pagination"></ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer"></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/header-footer.js"></script>
+    <script src="js/products.js"></script>
+  </body>
+</html>

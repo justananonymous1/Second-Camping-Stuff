@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - OutdoorGear</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+  </head>
+  <body>
+    <header id="header"></header>
+
+    <section class="contact-hero py-5 bg-light">
+      <div class="container text-center">
+        <h1 class="mb-3">Contact Us</h1>
+        <p class="lead mb-0">Have questions? We'd love to hear from you.</p>
+      </div>
+    </section>
+
+    <section class="contact-info py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="contact-card text-center">
+              <div class="contact-icon mb-3">
+                <i class="bi bi-geo-alt"></i>
+              </div>
+              <h3>Visit Us</h3>
+              <p>123 Street of Earth<br />Earth City, AC 12345<br />Terra</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="contact-card text-center">
+              <div class="contact-icon mb-3">
+                <i class="bi bi-telephone"></i>
+              </div>
+              <h3>Call Us</h3>
+              <p>Phone: (555) 123- 123<br />Fax: (123) 123-123</p>
+              <p class="text-muted">Mon-Fri: 9:00 AM - 6:00 PM</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="contact-card text-center">
+              <div class="contact-icon mb-3">
+                <i class="bi bi-envelope"></i>
+              </div>
+              <h3>Email Us</h3>
+              <p>
+                General: info@outdoorgear.com<br />Support:
+                support@outdoorgear.com
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-form-section py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <div class="contact-form-container">
+              <h2 class="mb-4">Send Us a Message</h2>
+              <form id="contact-form">
+                <div class="mb-3">
+                  <label for="name" class="form-label">Your Name</label>
+                  <input type="text" class="form-control" id="name" required />
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email Address</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="subject" class="form-label">Subject</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="subject"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="message" class="form-label">Message</label>
+                  <textarea
+                    class="form-control"
+                    id="message"
+                    rows="5"
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="map-container">
+              <h2 class="mb-4">Our Location</h2>
+              <div class="ratio ratio-4x3">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2601.3938228896154!2d100.9694016976173!3d22.768111561512914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x36d56d288e906665%3A0x3c9488a627ed99a2!2sIdiot%20Tasty%20Shashlik!5e0!3m2!1sen!2smm!4v1750399828257!5m2!1sen!2smm"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                >
+                </iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer"></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/header-footer.js"></script>
+    <script src="js/contact.js"></script>
+  </body>
+</html>

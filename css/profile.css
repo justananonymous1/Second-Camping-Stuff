@@ -1,0 +1,150 @@
+.profile-section {
+  background-color: var(--gray-100);
+  min-height: 80vh;
+}
+
+.profile-sidebar {
+  background-color: white;
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  height: fit-content;
+  position: sticky;
+  top: 100px;
+}
+
+.profile-card {
+  border-bottom: 1px solid var(--gray-300);
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.profile-avatar img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 3px solid var(--primary-light);
+}
+
+.profile-menu .list-group-item {
+  border: none;
+  border-radius: var(--border-radius-sm);
+  margin-bottom: 0.5rem;
+  transition: var(--transition-fast);
+}
+
+.profile-menu .list-group-item:hover {
+  background-color: var(--primary-light);
+  color: white;
+}
+
+.profile-menu .list-group-item.active {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.profile-content {
+  background-color: white;
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.profile-section-content {
+  display: none;
+}
+
+.profile-section-content.active {
+  display: block;
+}
+
+.section-header {
+  border-bottom: 1px solid var(--gray-300);
+  padding-bottom: 1rem;
+}
+
+.order-item {
+  border: 1px solid var(--gray-300);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  transition: var(--transition-fast);
+}
+
+.order-item:hover {
+  box-shadow: var(--shadow-sm);
+}
+
+.order-item-image {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: var(--border-radius-sm);
+}
+
+.address-card,
+.payment-card {
+  border: 1px solid var(--gray-300);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  height: 100%;
+  transition: var(--transition-fast);
+}
+
+.address-card:hover,
+.payment-card:hover {
+  box-shadow: var(--shadow-sm);
+}
+
+.add-address-card,
+.add-payment-card {
+  border: 2px dashed var(--gray-300);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-fast);
+}
+
+.add-address-card:hover,
+.add-payment-card:hover {
+  border-color: var(--primary);
+  background-color: var(--gray-100);
+}
+
+.address-header,
+.payment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.address-actions,
+.payment-actions {
+  margin-top: 1rem;
+}
+
+@media (max-width: 991.98px) {
+  .profile-sidebar {
+    position: static;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .profile-content {
+    padding: 1.5rem;
+  }
+  
+  .order-item {
+    padding: 1rem;
+  }
+  
+  .address-card,
+  .payment-card {
+    padding: 1rem;
+  }
+}

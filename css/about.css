@@ -1,0 +1,160 @@
+.about-hero {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+}
+
+.section-title {
+  position: relative;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.section-title:after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: var(--primary);
+  margin-top: 0.5rem;
+}
+
+.company-story img {
+  transition: transform 0.3s ease;
+}
+
+.company-story img:hover {
+  transform: scale(1.02);
+}
+
+.mission-card {
+  background-color: white;
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  height: 100%;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-base);
+}
+
+.mission-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+}
+
+.mission-icon {
+  font-size: 3rem;
+  color: var(--primary);
+}
+
+.founder-card {
+  background-color: white;
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  height: 100%;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-base);
+}
+
+.founder-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+}
+
+.founder-image img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 4px solid var(--primary-light);
+  transition: var(--transition-base);
+}
+
+.founder-card:hover .founder-image img {
+  border-color: var(--primary);
+}
+
+.founder-title {
+  color: var(--primary);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.founder-social {
+  margin-top: 1rem;
+}
+
+.social-link {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background-color: var(--gray-200);
+  color: var(--gray-700);
+  border-radius: 50%;
+  margin: 0 0.25rem;
+  transition: var(--transition-fast);
+  text-decoration: none;
+}
+
+.social-link:hover {
+  background-color: var(--primary);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.company-stats {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+}
+
+.stat-item {
+  padding: 1rem;
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.sustainability-point {
+  margin-bottom: 1.5rem;
+}
+
+.point-icon {
+  font-size: 2rem;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sustainability img {
+  transition: transform 0.3s ease;
+}
+
+.sustainability img:hover {
+  transform: scale(1.02);
+}
+
+@media (max-width: 767.98px) {
+  .about-hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .mission-card,
+  .founder-card {
+    padding: 1.5rem;
+  }
+  
+  .founder-image img {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .stat-number {
+    font-size: 2.5rem;
+  }
+}

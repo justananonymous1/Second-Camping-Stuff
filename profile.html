@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Profile - OutdoorGear</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/profile.css" />
+  </head>
+  <body>
+    <header id="header"></header>
+
+    <section class="profile-section py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 mb-4">
+            <div class="profile-sidebar">
+              <div class="profile-card text-center mb-4">
+                <div class="profile-avatar mb-3">
+                  <img
+                    src="images/Profile/Serial.jpg"
+                    alt="Profile Picture"
+                    class="rounded-circle"
+                    id="profile-picture"
+                  />
+                  <button
+                    class="btn btn-sm btn-outline-primary mt-2"
+                    id="change-picture-btn"
+                  >
+                    Change Picture
+                  </button>
+                </div>
+                <h4 id="profile-name">Just_AnAnonymous</h4>
+                <p class="text-muted" id="profile-email">
+                  Justananonymous@gmail.com
+                </p>
+                <span class="badge bg-success">Verified Account</span>
+              </div>
+
+              <div class="profile-menu">
+                <div class="list-group">
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action active"
+                    data-section="personal-info"
+                  >
+                    <i class="bi bi-person me-2"></i> Personal Information
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action"
+                    data-section="orders"
+                  >
+                    <i class="bi bi-bag me-2"></i> Order History
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action"
+                    data-section="addresses"
+                  >
+                    <i class="bi bi-geo-alt me-2"></i> Addresses
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action"
+                    data-section="payment"
+                  >
+                    <i class="bi bi-credit-card me-2"></i> Payment Methods
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action"
+                    data-section="security"
+                  >
+                    <i class="bi bi-shield-lock me-2"></i> Security
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action"
+                    data-section="notifications"
+                  >
+                    <i class="bi bi-bell me-2"></i> Notifications
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-9">
+            <div class="profile-content">
+              <div class="profile-section-content active" id="personal-info">
+                <div class="section-header mb-4">
+                  <h2>Personal Information</h2>
+                  <p class="text-muted">
+                    Manage your personal details and preferences
+                  </p>
+                </div>
+
+                <form id="personal-info-form">
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label for="first-name" class="form-label"
+                        >First Name</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="first-name"
+                        value="Just_AnAnonymous"
+                      />
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label for="last-name" class="form-label"
+                        >Last Name</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="last-name"
+                        value=""
+                      />
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      value="Justananonymous@gmail.com"
+                    />
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="phone"
+                      value="10 10 10 10"
+                    />
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="birth-date" class="form-label"
+                      >Date of Birth</label
+                    >
+                    <input
+                      type="date"
+                      class="form-control"
+                      id="birth-date"
+                      value="2000-02-02"
+                    />
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="gender" class="form-label">Gender</label>
+                    <select class="form-select" id="gender">
+                      <option value="">Prefer not to say</option>
+                      <option value="male">Male</option>
+                      <option value="female">Female</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary">
+                    Save Changes
+                  </button>
+                </form>
+              </div>
+
+              <div class="profile-section-content" id="orders">
+                <div class="section-header mb-4">
+                  <h2>Order History</h2>
+                  <p class="text-muted">View and track your orders</p>
+                </div>
+
+                <div class="order-filters mb-4">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <select class="form-select" id="order-status-filter">
+                        <option value="">All Orders</option>
+                        <option value="pending">Pending</option>
+                        <option value="shipped">Shipped</option>
+                        <option value="delivered">Delivered</option>
+                        <option value="cancelled">Cancelled</option>
+                      </select>
+                    </div>
+                    <div class="col-md-4">
+                      <input
+                        type="date"
+                        class="form-control"
+                        id="order-date-from"
+                        placeholder="From Date"
+                      />
+                    </div>
+                    <div class="col-md-4">
+                      <input
+                        type="date"
+                        class="form-control"
+                        id="order-date-to"
+                        placeholder="To Date"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div id="orders-container">
+                  <div class="order-item">
+                    <div class="order-header">
+                      <div class="row align-items-center">
+                        <div class="col-md-3">
+                          <strong>Order #ORD-123456</strong>
+                        </div>
+                        <div class="col-md-3">
+                          <span class="text-muted">March 15, 2024</span>
+                        </div>
+                        <div class="col-md-3">
+                          <span class="badge bg-success">Delivered</span>
+                        </div>
+                        <div class="col-md-3 text-end">
+                          <strong>$249.99</strong>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="order-items mt-3">
+                      <div class="d-flex align-items-center">
+                        <img
+                          src="https://images.pexels.com/photos/6271625/pexels-photo-6271625.jpeg"
+                          alt="Product"
+                          class="order-item-image me-3"
+                        />
+                        <div>
+                          <h6>Adventure Pro Tent</h6>
+                          <p class="text-muted mb-0">Quantity: 1</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="order-actions mt-3">
+                      <button class="btn btn-outline-primary btn-sm">
+                        View Details
+                      </button>
+                      <button class="btn btn-outline-secondary btn-sm">
+                        Reorder
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="profile-section-content" id="addresses">
+                <div class="section-header mb-4">
+                  <h2>Saved Addresses</h2>
+                  <p class="text-muted">
+                    Manage your shipping and billing addresses
+                  </p>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <div class="address-card">
+                      <div class="address-header">
+                        <h5>Home Address</h5>
+                        <span class="badge bg-primary">Default</span>
+                      </div>
+                      <div class="address-details">
+                        <p>
+                          Just_AnAnonymous<br />
+                          123 Main Street<br />
+                          Apartment 4B<br />
+                          New York, NY 10001<br />
+                          United States
+                        </p>
+                      </div>
+                      <div class="address-actions">
+                        <button class="btn btn-outline-primary btn-sm">
+                          Edit
+                        </button>
+                        <button class="btn btn-outline-danger btn-sm">
+                          Delete
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 mb-4">
+                    <div class="add-address-card">
+                      <div class="text-center">
+                        <i
+                          class="bi bi-plus-circle display-4 text-muted mb-3"
+                        ></i>
+                        <h5>Add New Address</h5>
+                        <button class="btn btn-primary">Add Address</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="profile-section-content" id="payment">
+                <div class="section-header mb-4">
+                  <h2>Payment Methods</h2>
+                  <p class="text-muted">Manage your saved payment methods</p>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <div class="payment-card">
+                      <div class="payment-header">
+                        <h5>
+                          <i class="bi bi-credit-card me-2"></i>Visa ending in
+                          4242
+                        </h5>
+                        <span class="badge bg-primary">Default</span>
+                      </div>
+                      <div class="payment-details">
+                        <p>Expires: 12/25</p>
+                      </div>
+                      <div class="payment-actions">
+                        <button class="btn btn-outline-primary btn-sm">
+                          Edit
+                        </button>
+                        <button class="btn btn-outline-danger btn-sm">
+                          Remove
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 mb-4">
+                    <div class="add-payment-card">
+                      <div class="text-center">
+                        <i
+                          class="bi bi-plus-circle display-4 text-muted mb-3"
+                        ></i>
+                        <h5>Add Payment Method</h5>
+                        <button class="btn btn-primary">Add Card</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="profile-section-content" id="security">
+                <div class="section-header mb-4">
+                  <h2>Security Settings</h2>
+                  <p class="text-muted">Manage your account security</p>
+                </div>
+
+                <form id="security-form">
+                  <div class="mb-4">
+                    <h5>Change Password</h5>
+                    <div class="mb-3">
+                      <label for="current-password" class="form-label"
+                        >Current Password</label
+                      >
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="current-password"
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label for="new-password" class="form-label"
+                        >New Password</label
+                      >
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="new-password"
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label for="confirm-password" class="form-label"
+                        >Confirm New Password</label
+                      >
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="confirm-password"
+                      />
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                      Update Password
+                    </button>
+                  </div>
+
+                  <div class="mb-4">
+                    <h5>Two-Factor Authentication</h5>
+                    <div class="form-check form-switch">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="two-factor-auth"
+                      />
+                      <label class="form-check-label" for="two-factor-auth">
+                        Enable two-factor authentication
+                      </label>
+                    </div>
+                    <small class="text-muted"
+                      >Add an extra layer of security to your account</small
+                    >
+                  </div>
+                </form>
+              </div>
+
+              <div class="profile-section-content" id="notifications">
+                <div class="section-header mb-4">
+                  <h2>Notification Preferences</h2>
+                  <p class="text-muted">
+                    Choose what notifications you want to receive
+                  </p>
+                </div>
+
+                <form id="notifications-form">
+                  <div class="mb-4">
+                    <h5>Email Notifications</h5>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="email-orders"
+                        checked
+                      />
+                      <label class="form-check-label" for="email-orders">
+                        Order updates and shipping notifications
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="email-promotions"
+                      />
+                      <label class="form-check-label" for="email-promotions">
+                        Promotional offers and discounts
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="email-newsletter"
+                        checked
+                      />
+                      <label class="form-check-label" for="email-newsletter">
+                        Newsletter and product updates
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="mb-4">
+                    <h5>SMS Notifications</h5>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="sms-orders"
+                      />
+                      <label class="form-check-label" for="sms-orders">
+                        Order and delivery updates
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="sms-security"
+                      />
+                      <label class="form-check-label" for="sms-security">
+                        Security alerts
+                      </label>
+                    </div>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary">
+                    Save Preferences
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer"></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/header-footer.js"></script>
+    <script src="js/profile.js"></script>
+  </body>
+</html>
